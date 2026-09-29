@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerenciador de Finanças</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gerenciador de Finanças</h1>
+        <p>Controle suas receitas e despesas</p>
+    </header>
+
+    <main>
+
+        <section class="resumo">
+
+            <div class="card">
+                <h2>Receitas</h2>
+                <p id="totalReceitas">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h2>Despesas</h2>
+                <p id="totalDespesas">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h2>Saldo</h2>
+                <p id="saldo">R$ 0,00</p>
+            </div>
+
+        </section>
+
+
+        <section class="formulario">
+
+            <h2>Nova movimentação</h2>
+
+            <form id="formMovimentacao">
+
+                <label for="tipo">Tipo</label>
+
+                <select id="tipo" required>
+                    <option value="Receita">Receita</option>
+                    <option value="Despesa">Despesa</option>
+                </select>
+
+
+                <label for="descricao">Descrição</label>
+
+                <input
+                    type="text"
+                    id="descricao"
+                    placeholder="Ex: Salário"
+                    maxlength="200"
+                    required
+                >
+
+
+                
+<label for="categoria">Categoria</label>
+
+<select id="categoria" required>
+
+    <option value="">Selecione uma categoria</option>
+    <option value="Moradia">Moradia</option>
+    <option value="Alimentação">Alimentação</option>
+    <option value="Transporte">Transporte</option>
+    <option value="Trabalho">Trabalho</option>
+    <option value="Saúde">Saúde</option>
+    <option value="Educação">Educação</option>
+    <option value="Lazer">Lazer</option>
+    <option value="Outros">Outros</option>
+
+</select>
+
+
+<label for="valor">Valor</label>
+
+<input
+    type="number"
+    id="valor"
+    step="0.01"
+    min="0.01"
+    placeholder="Ex: 2500"
+    required
+>
+
+
+<label for="data">Data</label>
+
+<input
+    type="date"
+    id="data"
+    required
+>
+
+
+                <button type="submit">
+                    Cadastrar movimentação
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="lista">
+
+    <h2>Movimentações</h2>
+
+    <select id="filtroTipo">
+        <option value="Todos">Todas</option>
+        <option value="Receita">Receitas</option>
+        <option value="Despesa">Despesas</option>
+    </select>
+
+    <select id="filtroCategoria">
+
+    <option value="Todas">Todas as categorias</option>
+
+    <option value="Moradia">Moradia</option>
+
+    <option value="Alimentação">Alimentação</option>
+
+    <option value="Transporte">Transporte</option>
+
+    <option value="Trabalho">Trabalho</option>
+
+    <option value="Saúde">Saúde</option>
+
+    <option value="Educação">Educação</option>
+
+    <option value="Lazer">Lazer</option>
+
+    <option value="Outros">Outros</option>
+
+</select>
+
+<div class="filtros-data">
+
+    <label for="dataInicial">Data inicial</label>
+
+    <input
+        type="date"
+        id="dataInicial"
+    >
+
+    <label for="dataFinal">Data final</label>
+
+    <input
+        type="date"
+        id="dataFinal"
+    >
+
+</div>
+
+<button id="limparFiltros" type="button">
+    Limpar filtros
+</button>
+
+    <div id="listaMovimentacoes"></div>
+
+</section>
+<section class="grafico">
+
+    <h2>Despesas por categoria</h2>
+
+    <canvas id="graficoDespesas"></canvas>
+
+</section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
