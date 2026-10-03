@@ -2,6 +2,10 @@
 
 Sistema web desenvolvido em Python para controle de receitas e despesas pessoais.
 
+
+## 📸 Sistema em funcionamento
+
+![Tela principal do Gerenciador de Finanças](screenshots/tela-principal.png)
 O projeto permite cadastrar, consultar, editar e excluir movimentações financeiras, acompanhar o saldo e visualizar as despesas organizadas por categoria.
 
 ## 🎯 Objetivo
