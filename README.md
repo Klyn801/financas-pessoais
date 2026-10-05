@@ -1,6 +1,12 @@
 # 💰 Gerenciador de Finanças Pessoais
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
+![SQLite](https://img.shields.io/badge/Database-SQLite-orange)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-black)
 
 Sistema web desenvolvido em Python para controle de receitas e despesas pessoais.
+
 
 
 ## 📸 Sistema em funcionamento
